@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Spotter Help Library</title>
 <meta name="description" content="Video guides and answers for Spotter TMS, Driver App, Fuelseek, Sentinel and integrations.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
 <style>
-:root{--bg:#f1f5fb;--surface:#fff;--ink:#0f1b2d;--muted:#566680;--line:#d6deec;--sign:#1558d6;--signink:#fff;--lane:#7cc4ff;--ok:#1d7a4a;--okbg:#dff3e7;--warn:#9a5b00;--warnbg:#fdf1d6;
+:root{--bg:#eef5f6;--surface:#fff;--ink:#091930;--muted:#4f6670;--line:#cfe0e3;--sign:#091930;--signink:#fff;--teal:#037d80;--lane:#fe4b5e;--ok:#1d7a4a;--okbg:#dff3e7;--warn:#9a5b00;--warnbg:#fdf1d6;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1424;--surface:#142039;--ink:#e8eefb;--muted:#9fb0cf;--line:#263553;--sign:#2f6df0;--ok:#6fd49a;--okbg:#163a27;--warn:#f0c36a;--warnbg:#3a2e12;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0c1424;--surface:#142039;--ink:#e8eefb;--muted:#9fb0cf;--line:#263553;--sign:#2f6df0;--ok:#6fd49a;--okbg:#163a27;--warn:#f0c36a;--warnbg:#3a2e12;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#071324;--surface:#0f2340;--ink:#e8eefb;--muted:#9db8c0;--line:#22395a;--sign:#0d2547;--ok:#6fd49a;--teal:#2bb3b6;--okbg:#163a27;--warn:#f0c36a;--warnbg:#3a2e12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#071324;--surface:#0f2340;--ink:#e8eefb;--muted:#9db8c0;--line:#22395a;--sign:#0d2547;--ok:#6fd49a;--teal:#2bb3b6;--okbg:#163a27;--warn:#f0c36a;--warnbg:#3a2e12;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
@@ -19,12 +20,11 @@ button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
 :focus-visible{outline:3px solid var(--lane);outline-offset:2px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--sign);color:var(--signink);display:flex;gap:14px;align-items:center;padding:12px 24px;flex-wrap:wrap}
 .brand{background:none;border:0;font-weight:800;font-size:19px;color:inherit;display:flex;align-items:center;gap:10px;padding:0}
-.brand i{width:28px;height:28px;border-radius:6px;background:var(--lane);position:relative;display:inline-block}
-.brand i::after{content:"";position:absolute;left:13px;top:4px;bottom:4px;border-left:3px dashed var(--sign)}
+.brand img{height:30px;width:auto;display:block}
 .search{flex:1;min-width:200px;max-width:560px}
 .search input{width:100%;padding:10px 14px;border-radius:8px;border:2px solid transparent;background:#fff;color:#0f1b2d}
 .hbtn{background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:8px;padding:8px 12px}
-.hbtn.solid{background:#fff;color:var(--sign);font-weight:700}
+.hbtn.solid{background:#fff;color:#091930;font-weight:700}
 .wrap{display:grid;grid-template-columns:240px 1fr;gap:32px;max-width:1180px;margin:0 auto;padding:28px 24px 60px}
 nav.side{position:sticky;top:calc(84px + env(safe-area-inset-top,0px));align-self:start;display:flex;flex-direction:column;gap:2px}
 nav.side button{text-align:left;background:none;border:0;padding:9px 12px;border-radius:8px;color:var(--muted);display:flex;justify-content:space-between}
@@ -41,10 +41,10 @@ h2{font-size:22px;margin:32px 0 12px;font-weight:700}
 .card:hover{border-color:var(--sign)}
 .card .body{padding:14px 16px 16px}.card h3{margin:6px 0 4px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}
 .cat{padding:18px}.cat b{font-size:18px;display:block}.cat span{color:var(--muted);font-size:14px}
-.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--sign),#0b2f75);position:relative;display:grid;place-items:center}
+.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#091930,#0d3a55);position:relative;display:grid;place-items:center}
 .thumb .t{position:absolute;left:10px;bottom:8px;font-size:13px;background:rgba(0,0,0,.6);color:#fff;padding:1px 7px;border-radius:5px}
 .play{width:46px;height:46px;border-radius:50%;background:var(--lane);display:grid;place-items:center}
-.play::after{content:"";border-left:14px solid #0f1b2d;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.play::after{content:"";border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
 .tag{display:inline-block;font-size:12.5px;padding:2px 9px;border-radius:99px;font-weight:600}
 .tag.ok{background:var(--okbg);color:var(--ok)}.tag.rev{background:var(--warnbg);color:var(--warn)}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -54,13 +54,13 @@ h2{font-size:22px;margin:32px 0 12px;font-weight:700}
 .player video{width:100%;height:100%;display:block;background:#000}
 .steps{counter-reset:s;list-style:none;padding:0;margin:0}
 .steps li{counter-increment:s;position:relative;padding:0 0 18px 46px}
-.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--sign);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
 .steps li::after{content:"";position:absolute;left:14px;top:30px;bottom:2px;border-left:2px dashed var(--lane)}.steps li:last-child::after{display:none}
 aside.meta{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:14.5px;position:sticky;top:calc(84px + env(safe-area-inset-top,0px))}
 aside.meta dt{color:var(--muted);font-size:13px;margin-top:10px}aside.meta dd{margin:0;font-weight:600}
 details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px}
 summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--muted);white-space:pre-wrap}
-.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 14px}.btn.pri{background:var(--sign);color:#fff;border-color:var(--sign);font-weight:700}.btn.del{color:#c0392b}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 14px}.btn.pri{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700}.btn.del{color:#c0392b}
 .note{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:10px 14px;font-size:14px;margin:0 0 20px}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted)}
 .player:has(video),.player:has(iframe){padding:0}
@@ -74,7 +74,7 @@ dialog small{color:var(--muted);font-weight:400}
 </head>
 <body>
 <header>
-  <button class="brand" onclick="go('')"><i></i>Spotter Help Library</button>
+  <button class="brand" onclick="go('')"><img src="assets/logo.svg" alt="" width="40" height="30">Spotter Help Library</button>
   <div class="search"><input id="q" type="search" placeholder="Ask a question, for example “how do I save a template”" aria-label="Search" autocomplete="off"></div>
       <button class="hbtn" id="theme">Light or dark</button>
 </header>
