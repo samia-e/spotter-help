@@ -1,10 +1,35 @@
 {
   "products": [
-    {"id": "tms", "name": "Spotter TMS", "description": "Assignments, loads, payroll and profiles"},
-    {"id": "app", "name": "Driver App", "description": "Documents, binder and geofencing"},
-    {"id": "fuel", "name": "Fuelseek", "description": "Fuel data and email forwarding"},
-    {"id": "sen", "name": "Sentinel", "description": "Driver monitoring and safety"},
-    {"id": "int", "name": "Integrations", "description": "PrePass, WEX, Samsara and factoring"}
+    {
+      "id": "tms",
+      "name": "Spotter TMS",
+      "description": "Assignments, loads, billing, payroll and profiles"
+    },
+    {
+      "id": "app",
+      "name": "Driver App",
+      "description": "Driver activation, documents, binder and messages"
+    },
+    {
+      "id": "fuel",
+      "name": "Fuelseek",
+      "description": "Fuel plans and fuel data"
+    },
+    {
+      "id": "sen",
+      "name": "Sentinel",
+      "description": "Driver screening, safety scores and monitoring"
+    },
+    {
+      "id": "crm",
+      "name": "CRM",
+      "description": "Notes and dial pad"
+    },
+    {
+      "id": "int",
+      "name": "Integrations",
+      "description": "Slack, factoring, ELD and other connections"
+    }
   ],
   "guides": [
     {
@@ -17,18 +42,687 @@
       "length": "0:43",
       "audience": "Dispatchers, owners",
       "owner": "Edward, Bobi",
-      "verified": false,
+      "verified": true,
       "updated": "2026-10-20",
       "steps": [
-        {"title": "Go to Assignments", "detail": "Open Assignments in the left menu, then choose the Trucks, Drivers or Trailers tab."},
-        {"title": "Open Options and search “master”", "detail": "The list shows the templates available to your account."},
-        {"title": "Tick Show next to the templates you want", "detail": "Dispatcher, Onboarding and Maintenance appear in your toolbar once they are shown."},
-        {"title": "Pick a template from the Assignments page", "detail": "Your columns and filters change instantly."}
+        {
+          "title": "Go to Assignments",
+          "detail": "Open Assignments in the left menu, then choose the Trucks, Drivers or Trailers tab."
+        },
+        {
+          "title": "Open Options and search “master”",
+          "detail": "The list shows the templates available to your account."
+        },
+        {
+          "title": "Tick Show next to the templates you want",
+          "detail": "Dispatcher, Onboarding and Maintenance appear in your toolbar once they are shown."
+        },
+        {
+          "title": "Pick a template from the Assignments page",
+          "detail": "Your columns and filters change instantly."
+        }
       ],
       "faqs": [
-        {"q": "Can I build my own template?", "a": "Yes. Set your Filters and Columns, then click Save Template."}
+        {
+          "q": "Can I build my own template?",
+          "a": "Yes. Set your Filters and Columns, then click Save Template."
+        }
       ]
+    },
+    {
+      "id": "driver-onboarding",
+      "title": "Driver onboarding",
+      "product": "tms",
+      "summary": "Video walkthrough of onboarding a driver.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "finding-expired-documents",
+      "title": "Finding expired documents",
+      "product": "tms",
+      "summary": "Video walkthrough of finding expired documents.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "assignments",
+      "title": "Assignments",
+      "product": "tms",
+      "summary": "Video walkthrough of the Assignments page.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "create-a-new-load",
+      "title": "Create a new load",
+      "product": "tms",
+      "summary": "Video walkthrough of creating a load.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "split-a-load",
+      "title": "Split a load",
+      "product": "tms",
+      "summary": "Video walkthrough of splitting a load.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "bill-loads",
+      "title": "Bill loads",
+      "product": "tms",
+      "summary": "Video walkthrough of billing loads.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "look-up-a-load",
+      "title": "Look up a load",
+      "product": "tms",
+      "summary": "Video walkthrough of finding a load with Lookup.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "yellow",
+      "internal_note": "Low voice quality. Consider re-recording."
+    },
+    {
+      "id": "history",
+      "title": "History: Drivers, Assignments and Loads",
+      "product": "tms",
+      "summary": "Video walkthrough of the History views.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "new-brokerage-and-dnu",
+      "title": "Create a new brokerage and mark it as DNU",
+      "product": "tms",
+      "summary": "Video walkthrough of adding a brokerage and marking it Do Not Use.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "red",
+      "internal_note": "Link was broken or errored in the canvas. Re-record or re-upload."
+    },
+    {
+      "id": "general-usage",
+      "title": "General usage",
+      "product": "tms",
+      "summary": "Video overview of everyday use of the TMS.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "custom-filters",
+      "title": "Custom filters",
+      "product": "tms",
+      "summary": "Video walkthrough of building and saving a custom filter (CustomFilter.mp4).",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "crm-taking-notes",
+      "title": "Taking notes in the CRM",
+      "product": "crm",
+      "summary": "Video walkthrough of adding notes in the CRM.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "green"
+    },
+    {
+      "id": "crm-dial-pad",
+      "title": "CRM: Dial pad instructions",
+      "product": "crm",
+      "summary": "Video walkthrough of using the dial pad.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [],
+      "faqs": [],
+      "canvas_status": "yellow",
+      "internal_note": "Low voice quality. Consider re-recording."
+    },
+    {
+      "id": "sentinel-connect-slack",
+      "title": "Connect Sentinel to Slack",
+      "product": "sen",
+      "summary": "Set up the Sentinel bot and a Slack channel for driver assessments.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [
+        {
+          "title": "Open Sentinel, then Settings, then Slack.",
+          "detail": ""
+        },
+        {
+          "title": "Click Integrate Sentinel Bot.",
+          "detail": ""
+        },
+        {
+          "title": "Select Allow to authorize Slack access.",
+          "detail": ""
+        },
+        {
+          "title": "Create a dedicated Slack channel for driver assessments.",
+          "detail": ""
+        },
+        {
+          "title": "Add the Sentinel app to the channel.",
+          "detail": ""
+        },
+        {
+          "title": "In Sentinel, go to Settings, then Profile Settings, and add your Slack username.",
+          "detail": ""
+        },
+        {
+          "title": "Create a Contract Type and enter the exact Slack channel name.",
+          "detail": ""
+        },
+        {
+          "title": "Assign reviewers and a safety manager.",
+          "detail": ""
+        },
+        {
+          "title": "Turn on Notify Compliance for alerts.",
+          "detail": ""
+        },
+        {
+          "title": "Save the configuration.",
+          "detail": ""
+        }
+      ],
+      "faqs": []
+    },
+    {
+      "id": "sentinel-background-check",
+      "title": "Run a driver background check",
+      "product": "sen",
+      "summary": "Upload a CDL, order the checks and review the safety score.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [
+        {
+          "title": "Open Sentinel and select Upload CDL.",
+          "detail": ""
+        },
+        {
+          "title": "Upload the driver’s CDL.",
+          "detail": ""
+        },
+        {
+          "title": "Select the appropriate contract type.",
+          "detail": ""
+        },
+        {
+          "title": "Review the driver’s extracted information.",
+          "detail": ""
+        },
+        {
+          "title": "Order the required checks (MVR, PSP, CDLIS).",
+          "detail": ""
+        },
+        {
+          "title": "Click Run Background Check.",
+          "detail": ""
+        },
+        {
+          "title": "Review the safety score, violations, accidents and driving history.",
+          "detail": ""
+        },
+        {
+          "title": "Download the available reports or review the assessment in Slack.",
+          "detail": ""
+        }
+      ],
+      "faqs": []
+    },
+    {
+      "id": "sentinel-application-form",
+      "title": "Customize driver application forms",
+      "product": "sen",
+      "summary": "Add, rearrange and require fields on the driver application.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [
+        {
+          "title": "Open the Application Form settings.",
+          "detail": ""
+        },
+        {
+          "title": "Select the edit (pencil) icon.",
+          "detail": ""
+        },
+        {
+          "title": "Add or remove fields as needed.",
+          "detail": ""
+        },
+        {
+          "title": "Adjust field widths and placement.",
+          "detail": ""
+        },
+        {
+          "title": "Mark mandatory fields as Required.",
+          "detail": ""
+        },
+        {
+          "title": "Save the form.",
+          "detail": ""
+        },
+        {
+          "title": "Send the application link to the driver.",
+          "detail": ""
+        }
+      ],
+      "faqs": []
+    },
+    {
+      "id": "sentinel-safety-criteria",
+      "title": "Configure driver safety criteria",
+      "product": "sen",
+      "summary": "Set the eligibility rules Sentinel uses to calculate safety scores.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [
+        {
+          "title": "Open the company’s Eligibility Criteria settings.",
+          "detail": ""
+        },
+        {
+          "title": "Set minimum acceptable safety scores.",
+          "detail": ""
+        },
+        {
+          "title": "Configure violation criteria and lookback periods.",
+          "detail": ""
+        },
+        {
+          "title": "Define which violations are major or minor.",
+          "detail": ""
+        },
+        {
+          "title": "Save the criteria.",
+          "detail": ""
+        }
+      ],
+      "faqs": []
+    },
+    {
+      "id": "sentinel-mvr-monitoring",
+      "title": "Set up MVR monitoring",
+      "product": "sen",
+      "summary": "Monitor drivers and get notified when their MVR changes. Pricing: $300 setup plus $2.50 per monitored driver per month (confirm before publishing).",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [
+        {
+          "title": "Open MVR Monitoring.",
+          "detail": ""
+        },
+        {
+          "title": "Select the drivers to monitor.",
+          "detail": ""
+        },
+        {
+          "title": "Activate monitoring for the selected drivers.",
+          "detail": ""
+        },
+        {
+          "title": "Review notifications when MVR records change.",
+          "detail": ""
+        }
+      ],
+      "faqs": []
+    },
+    {
+      "id": "sentinel-assessments-to-slack",
+      "title": "Send driver assessments to Slack",
+      "product": "sen",
+      "summary": "Post each driver assessment to your Slack channel and alert the safety manager.",
+      "video": "",
+      "link": "",
+      "length": "",
+      "audience": "",
+      "owner": "",
+      "verified": true,
+      "updated": "2026-10-21",
+      "steps": [
+        {
+          "title": "Complete the Slack integration and contract type setup.",
+          "detail": ""
+        },
+        {
+          "title": "Open Upload CDL.",
+          "detail": ""
+        },
+        {
+          "title": "Select the configured contract type.",
+          "detail": ""
+        },
+        {
+          "title": "Run the background check.",
+          "detail": ""
+        },
+        {
+          "title": "Sentinel sends the assessment to the designated Slack channel.",
+          "detail": ""
+        },
+        {
+          "title": "The assigned safety manager receives alerts when compliance issues are detected.",
+          "detail": ""
+        }
+      ],
+      "faqs": []
     }
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "id": "faq-001",
+      "q": "How do I search for and find a load?",
+      "a": "Step 1: Open the main Loads page.\nStep 2: Adjust the date range. Set the start date to about one month before today so delivered loads are included. A range that is too wide, such as six months, can slow the system.\nStep 3: Enter the load or invoice number in the Lookup search bar.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-002",
+      "q": "How do I add a new broker or customer?",
+      "a": "Step 1: Go to Customers and click the plus (+) button.\nStep 2: Enter the broker’s MC number. The rest of the company details fill in automatically.\nStep 3: Add the address and contact details, then click Save.\n\nRequirements:\n• You need Write / Add Customers permission on your user role.\n• Add customers at the Company level, not the Holding level. If you can’t see the Customers tab in a Holding view, switch to the specific company.\n• If the MC number already exists, the TMS prevents a duplicate.\n• To block a broker with payment or service problems, mark it inactive or Do Not Use so it no longer appears in lists.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-003",
+      "q": "How do I enter a new load from a rate confirmation?",
+      "a": "Step 1: Open the Loads tab and click the plus (+) button.\nStep 2: Upload the rate confirmation.\nStep 3: The built-in AI reads it and fills in dates, rates and locations within a few seconds.\nStep 4: Assign the driver. Truck, trailer and equipment fill in automatically.\nStep 5: Check the data against the rate confirmation, especially that the gross amount matches, then click Add Load.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-004",
+      "q": "What is the difference between dispatcher statuses and billing statuses?",
+      "a": "Dispatcher statuses (for example Booked or At Shipper) apply while the load is in progress, until it is delivered.\nBilling statuses (Delivered, Pending to Bill, Billed, Paid and so on) take over once the load is delivered and the paperwork is verified.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-005",
+      "q": "How do I correct a load that is locked in a status I can’t edit?",
+      "a": "Step 1: Find the load and change its status back to Booked. Only Booked allows full editing and reversing.\nStep 2: Make the corrections, such as fixing the broker or the rate.\nStep 3: Save, then return the load to its correct status.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-006",
+      "q": "How do I process a TONU (Truck Order Not Used) load?",
+      "a": "Step 1: Change the load status back to Booked.\nStep 2: Change the status to TONU. Use this when a driver arrives at pickup but the load is cancelled or not ready.\nStep 3: The system updates the pickup location and applies the standard TONU payout, typically $150. Change it manually if the broker paid a different amount.\nStep 4: Save. To bill the TONU once you have a revised rate confirmation, move it to Pending to Bill.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-007",
+      "q": "How do I bill loads to the factoring company?",
+      "a": "Step 1: Review paperwork. Dispatchers upload PODs, and billing checks that the POD and rate confirmation match in gross amount and locations.\nStep 2: If something is missing or wrong, set the load to Missing Paperwork and add a clear note (for example “Issue POD” or “Issue Rate Confirmation”).\nStep 3: When everything, including lumpers and detention, is correct, change the status to Pending to Bill and save.\nStep 4: Open the Pending to Bill view. If you have many loads, raise Rows per page (for example 150 or 250), select the loads and click Bill.\nStep 5: Look for the “Billing process started” message in the upper right. Data goes to the factoring company (RTS) automatically, and successful loads move to Billed within a few minutes.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-008",
+      "q": "What should I do if loads get stuck while billing?",
+      "a": "Step 1: In the billing status view, select the stuck loads and switch them back to Pending to Bill.\nStep 2: Select them and click Bill again.\nStep 3: If the batch still fails after a second try, contact IT support to check the connection with the factoring company.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-009",
+      "q": "How do I reconcile billed loads with the factoring company?",
+      "a": "Step 1: After billing a batch, compare the factoring company’s daily purchase report with your Billed count in the TMS.\nStep 2: If the number purchased matches what you submitted (for example 49 of 49), move those loads to Paid.\nStep 3: If some invoices were not purchased, find out why (missing pages, invalid broker and so on), move those loads back to Missing Paperwork or Pending to Bill to fix them, and keep the purchased ones tracked.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-010",
+      "q": "How do I add detention, layover or lumper fees after a load was billed?",
+      "a": "Step 1: Find the load.\nStep 2: Add the new fee amount in the load details.\nStep 3: Change the status to Open Balance (or use your internal tracking sheet) to record the adjustment.\nStep 4: Create or download an updated invoice with the added charges and send it to the broker.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-011",
+      "q": "How do load statuses affect driver payroll?",
+      "a": "Dispatching statuses are not payable to drivers. Billing and completed statuses are payable, so a load must be in a payable status to be included in the driver’s settlement.\n\nCurrent payroll week (Tuesday through Monday): if a driver earns extra pay such as detention and the week is not yet paid out, add the fee in the load details. The driver’s calculator and statement update automatically.\n\nPast payroll: if the payroll period has closed and been paid, enter the adjustment manually in the driver payroll calculator or PO sheet.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-012",
+      "q": "Can I move loads to future payroll dates or pay weeks?",
+      "a": "Yes. Users with the right permissions can move new and existing loads to future pay weeks (for example 10/15 or 10/22) from the calendar picker.\n\nRestrictions:\n• The load must not be Reconciled yet.\n• Past pay weeks can’t be selected because those payroll cycles have already run.\n• Your user role needs the required permission.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-013",
+      "q": "How do I choose what goes in a binder and in what order?",
+      "a": "Go to Assignments, then Settings, then Binders. Use the arrows to move documents between All Documents and Binder Documents, drag the handle to set the order, and tick Is Required where needed.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-014",
+      "q": "How do I print or save a binder?",
+      "a": "In the Assign window, use the Print icon next to Change Log and Save. It takes about 5 seconds.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-015",
+      "q": "Can I bulk upload one document that applies to every truck, such as a permit?",
+      "a": "Company-wide permits and certificates go in the Company documents tab (Holding view). They are shared across all trucks, so you add them once. Some document types are predefined, and if yours isn’t listed you can use Other.\n\nThere is currently no option to bulk upload one document to selected trucks. Truck-level documents still go in per truck.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-016",
+      "q": "Do I need separate desktop apps for Spotter TMS, Sentinel and Slack?",
+      "a": "They are separate connected applications. You can use all of them in a web browser, but installing the dedicated desktop app for each (especially Slack) gives the best experience.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-017",
+      "q": "How do we move our existing driver and fleet data from ProTransport?",
+      "a": "Export your data from ProTransport using the “Extract All” or CSV export option, and send the file to Stephan Delabar for batch import into Spotter.",
+      "product": "tms"
+    },
+    {
+      "id": "faq-018",
+      "q": "How do I activate a driver and send login credentials?",
+      "a": "Go to Drivers, then App. Select the deactivated driver, click Activate, and send an SMS with the generated credentials and app link.",
+      "product": "app"
+    },
+    {
+      "id": "faq-019",
+      "q": "When I assign a driver, does he get the information right away?",
+      "a": "Yes. When you hit Save, the driver is notified in the Spotter app, and a Fuelseek plan is generated.",
+      "product": "app"
+    },
+    {
+      "id": "faq-020",
+      "q": "How does the app send maintenance messages to the right team member?",
+      "a": "In TMS, go to Assignments and assign a staff member as the Maintenance Representative. When the driver selects “Maintenance” in the app, that person is tagged in Slack.",
+      "product": "app"
+    },
+    {
+      "id": "faq-021",
+      "q": "Where do the phone numbers in the Driver App call directory come from?",
+      "a": "They come directly from each team member’s Slack user profile.",
+      "product": "app"
+    },
+    {
+      "id": "faq-022",
+      "q": "Can drivers see our internal team conversations in Slack?",
+      "a": "No. Drivers only use their driver app. They do not see internal team messages or background notes.",
+      "product": "int"
+    },
+    {
+      "id": "faq-023",
+      "q": "Why isn’t the live fuel gauge showing for a driver in the app?",
+      "a": "It depends on the truck’s ELD. Royal ELD does not provide fuel gauge data through its API, so the live gauge can’t show for those trucks. Live fuel gauge data is fully supported on Samsara ELD units.",
+      "product": "fuel"
+    },
+    {
+      "id": "faq-024",
+      "q": "How does Fuelseek work for trucks without live ELD fuel data?",
+      "a": "The TMS uses a fallback fuel level of about 40% of tank capacity, so the driver still receives a working Fuelseek routing plan.",
+      "product": "fuel"
+    },
+    {
+      "id": "faq-025",
+      "q": "What checks does Sentinel cover?",
+      "a": "MVR, PSP, Clearinghouse, Medical Cards, CDLIS, and driver reviews and employer feedback.",
+      "product": "sen"
+    },
+    {
+      "id": "faq-026",
+      "q": "How does Sentinel’s driver review pricing compare to CDL Scan?",
+      "a": "CDL Scan charges $49.99 even to submit a review. Sentinel lets you submit reviews for free and charges only $3 when you request a driver review report. Confirm current pricing before quoting.",
+      "product": "sen"
+    },
+    {
+      "id": "faq-027",
+      "q": "Can we customize the driver application form with our own requirements?",
+      "a": "Yes. Fields can be added, rearranged, formatted (full or half width) and marked mandatory.",
+      "product": "sen"
+    },
+    {
+      "id": "faq-028",
+      "q": "Can drivers attach documents from their phone when they apply?",
+      "a": "Yes. Drivers can upload medical cards, the back of their CDL and prior work history.",
+      "product": "sen"
+    },
+    {
+      "id": "faq-029",
+      "q": "How does pre-employment verification work with previous employers?",
+      "a": "Sentinel looks up past companies automatically, sends verification requests every 48 hours and tracks the responses. After 3 failed attempts (30 days), it generates an FMCSA-compliant audit report.",
+      "product": "sen"
+    },
+    {
+      "id": "faq-030",
+      "q": "Can we set our own internal hiring standards, such as minimum age or experience?",
+      "a": "Yes, in the Eligibility Criteria settings. You can set rules such as minimum 5 years of experience or age under 55. Drivers who don’t meet them automatically receive a lower safety score.",
+      "product": "sen"
+    },
+    {
+      "id": "faq-031",
+      "q": "Why should we keep a balance in the Sentinel Wallet?",
+      "a": "If you order duplicate checks by accident, the funds are refunded to the wallet immediately. Refunds to a Stripe credit card can take up to 2 weeks.",
+      "product": "sen"
+    }
+  ]
 }
