@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spotter Help Library</title>
+<meta name="description" content="Video guides and answers for Spotter TMS, Driver App, Fuelseek, Sentinel and integrations.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+<style>
+:root{--bg:#f1f5fb;--surface:#fff;--ink:#0f1b2d;--muted:#566680;--line:#d6deec;--sign:#1558d6;--signink:#fff;--lane:#7cc4ff;--ok:#1d7a4a;--okbg:#dff3e7;--warn:#9a5b00;--warnbg:#fdf1d6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1424;--surface:#142039;--ink:#e8eefb;--muted:#9fb0cf;--line:#263553;--sign:#2f6df0;--ok:#6fd49a;--okbg:#163a27;--warn:#f0c36a;--warnbg:#3a2e12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1424;--surface:#142039;--ink:#e8eefb;--muted:#9fb0cf;--line:#263553;--sign:#2f6df0;--ok:#6fd49a;--okbg:#163a27;--warn:#f0c36a;--warnbg:#3a2e12;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sign);z-index:30}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid var(--lane);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--sign);color:var(--signink);display:flex;gap:14px;align-items:center;padding:12px 24px;flex-wrap:wrap}
+.brand{background:none;border:0;font-weight:800;font-size:19px;color:inherit;display:flex;align-items:center;gap:10px;padding:0}
+.brand i{width:28px;height:28px;border-radius:6px;background:var(--lane);position:relative;display:inline-block}
+.brand i::after{content:"";position:absolute;left:13px;top:4px;bottom:4px;border-left:3px dashed var(--sign)}
+.search{flex:1;min-width:200px;max-width:560px}
+.search input{width:100%;padding:10px 14px;border-radius:8px;border:2px solid transparent;background:#fff;color:#0f1b2d}
+.hbtn{background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:8px;padding:8px 12px}
+.hbtn.solid{background:#fff;color:var(--sign);font-weight:700}
+.wrap{display:grid;grid-template-columns:240px 1fr;gap:32px;max-width:1180px;margin:0 auto;padding:28px 24px 60px}
+nav.side{position:sticky;top:calc(84px + env(safe-area-inset-top,0px));align-self:start;display:flex;flex-direction:column;gap:2px}
+nav.side button{text-align:left;background:none;border:0;padding:9px 12px;border-radius:8px;color:var(--muted);display:flex;justify-content:space-between}
+nav.side button:hover{background:var(--surface)}
+nav.side button.on{background:var(--surface);color:var(--ink);font-weight:700;box-shadow:inset 4px 0 0 var(--lane)}
+nav.side small{color:var(--muted);padding:14px 12px 4px;font-weight:600}
+main{min-width:0}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px;font-weight:800;font-stretch:90%}
+h2{font-size:22px;margin:32px 0 12px;font-weight:700}
+.lede{color:var(--muted);max-width:60ch;margin:0 0 22px}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:14px}.crumbs button{background:none;border:0;padding:0;text-decoration:underline;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;text-align:left;overflow:hidden;display:flex;flex-direction:column;padding:0}
+.card:hover{border-color:var(--sign)}
+.card .body{padding:14px 16px 16px}.card h3{margin:6px 0 4px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}
+.cat{padding:18px}.cat b{font-size:18px;display:block}.cat span{color:var(--muted);font-size:14px}
+.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--sign),#0b2f75);position:relative;display:grid;place-items:center}
+.thumb .t{position:absolute;left:10px;bottom:8px;font-size:13px;background:rgba(0,0,0,.6);color:#fff;padding:1px 7px;border-radius:5px}
+.play{width:46px;height:46px;border-radius:50%;background:var(--lane);display:grid;place-items:center}
+.play::after{content:"";border-left:14px solid #0f1b2d;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.tag{display:inline-block;font-size:12.5px;padding:2px 9px;border-radius:99px;font-weight:600}
+.tag.ok{background:var(--okbg);color:var(--ok)}.tag.rev{background:var(--warnbg);color:var(--warn)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hero{background:var(--surface);border:1px solid var(--line);border-left:8px solid var(--lane);border-radius:14px;padding:26px;margin-bottom:8px}
+.art{display:grid;grid-template-columns:1fr 270px;gap:28px;align-items:start}
+.player{aspect-ratio:16/9;border-radius:12px;background:#07101f;overflow:hidden;border:1px solid var(--line);display:grid;place-items:center;color:#cfdcf5;text-align:center;padding:16px}
+.player video{width:100%;height:100%;display:block;background:#000}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding:0 0 18px 46px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--sign);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.steps li::after{content:"";position:absolute;left:14px;top:30px;bottom:2px;border-left:2px dashed var(--lane)}.steps li:last-child::after{display:none}
+aside.meta{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:14.5px;position:sticky;top:calc(84px + env(safe-area-inset-top,0px))}
+aside.meta dt{color:var(--muted);font-size:13px;margin-top:10px}aside.meta dd{margin:0;font-weight:600}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px}
+summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--muted);white-space:pre-wrap}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 14px}.btn.pri{background:var(--sign);color:#fff;border-color:var(--sign);font-weight:700}.btn.del{color:#c0392b}
+.note{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:10px 14px;font-size:14px;margin:0 0 20px}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted)}
+.player:has(video),.player:has(iframe){padding:0}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);width:min(640px,94vw);max-height:90vh;padding:22px}
+dialog::backdrop{background:rgba(5,12,25,.6)}
+dialog label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+dialog input,dialog select,dialog textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+dialog small{color:var(--muted);font-weight:400}
+@media(max-width:860px){.wrap{grid-template-columns:1fr;padding:18px 16px 50px}nav.side{position:static;flex-direction:row;flex-wrap:wrap}nav.side small{display:none}.art{grid-template-columns:1fr}aside.meta{position:static}header{padding:10px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <button class="brand" onclick="go('')"><i></i>Spotter Help Library</button>
+  <div class="search"><input id="q" type="search" placeholder="Ask a question, for example “how do I save a template”" aria-label="Search" autocomplete="off"></div>
+      <button class="hbtn" id="theme">Light or dark</button>
+</header>
+<div class="wrap"><nav class="side" id="side" aria-label="Library sections"></nav><main id="main"><div class="empty">Loading…</div></main></div>
+<script>
+var CATS=[];
+var A=[],F=[],db=null,user=null,assets=null,admin=false,ready=false;
+var $=function(s){return document.querySelector(s)},main=$("#main"),side=$("#side");
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function cat(id){return CATS.filter(function(c){return c.id===id})[0]||{n:"General",d:""}}
+function art(id){return A.filter(function(a){return a.id===id})[0]}
+function go(h){location.hash=h}
+function tag(a){return a.ok?'<span class="tag ok">Verified</span>':'<span class="tag rev">Needs review</span>'}
+function allFaqs(){var o=F.map(function(f){return{q:f.q,a:f.a,p:f.p,id:f.id,own:1}});A.forEach(function(a){(a.faq||[]).forEach(function(f){o.push({q:f.q,a:f.a,p:a.c,art:a.id})})});return o}
+function faqHtml(f){return '<details><summary>'+esc(f.q)+'</summary><p>'+esc(f.a)+'</p><div class="row" style="margin-top:8px"><span class="tag" style="background:var(--bg);color:var(--muted)">'+esc(cat(f.p).n)+'</span>'+(f.art&&art(f.art)?'<button class="btn" onclick="go(\'a/'+esc(f.art)+'\')">Watch the video</button>':'')+(admin&&f.own?'<button class="btn" onclick="editF(\''+esc(f.id)+'\')">Edit</button>':'')+'</div></details>'}
+function card(a){return '<button class="card" onclick="go(\'a/'+esc(a.id)+'\')"><div class="thumb"><div class="play"></div>'+(a.len?'<span class="t">'+esc(a.len)+'</span>':'')+'</div><div class="body"><div class="row">'+tag(a)+'<span style="font-size:13px;color:var(--muted)">'+esc(cat(a.c).n)+'</span></div><h3>'+esc(a.t)+'</h3><p>'+esc(a.s)+'</p></div></button>'}
+function nav(cur){var h='<button class="'+(cur===""?"on":"")+'" onclick="go(\'\')">Home</button><small>Products</small>';
+CATS.forEach(function(c){var n=A.filter(function(a){return a.c===c.id}).length;h+='<button class="'+(cur===c.id?"on":"")+'" onclick="go(\'c/'+c.id+'\')"><span>'+esc(c.n)+'</span><span>'+n+'</span></button>'});
+h+='<small>Help</small><button class="'+(cur==="faq"?"on":"")+'" onclick="go(\'faq\')"><span>All FAQs</span><span>'+allFaqs().length+'</span></button>';side.innerHTML=h}
+function sorted(){return A.slice().sort(function(a,b){return (b.updated||0)-(a.updated||0)})}
+function home(){nav("");var s=sorted();
+main.innerHTML='<div class="hero"><h1>Find the answer, then watch it done.</h1><p class="lede" style="margin:0">Type your question in the search bar, or pick your product. Every guide has a short video and written steps.</p></div>'+
+'<h2>Browse by product</h2><div class="grid">'+CATS.map(function(c){return '<button class="card cat" onclick="go(\'c/'+c.id+'\')"><b>'+esc(c.n)+'</b><span>'+esc(c.d)+'</span></button>'}).join("")+'</div>'+
+'<h2>Newest videos</h2>'+(s.length?'<div class="grid">'+s.slice(0,6).map(card).join("")+'</div>':empty())+
+'<h2>Common questions</h2>'+(allFaqs().length?allFaqs().slice(0,6).map(faqHtml).join(""):'<div class="empty">No FAQs yet.</div>')}
+function empty(){return '<div class="empty">Nothing here yet.'+(admin?' Use “Add video guide” at the top to create the first one.':'')+'</div>'}
+function list(id){var c=cat(id);nav(id);var l=sorted().filter(function(a){return a.c===id}),f=allFaqs().filter(function(x){return x.p===id});
+main.innerHTML='<div class="crumbs"><button onclick="go(\'\')">Home</button> / '+esc(c.n)+'</div><h1>'+esc(c.n)+'</h1><p class="lede">'+esc(c.d)+'</p><h2>Videos</h2>'+(l.length?'<div class="grid">'+l.map(card).join("")+'</div>':empty())+'<h2>Questions</h2>'+(f.length?f.map(faqHtml).join(""):'<div class="empty">No FAQs for this product yet.</div>')}
+function faqPage(){nav("faq");var f=allFaqs();main.innerHTML='<h1>All FAQs</h1><p class="lede">Search above, or browse everything we have answered.</p>'+(f.length?f.map(faqHtml).join(""):'<div class="empty">No FAQs yet.</div>')}
+function embed(u){var m;if(m=u.match(/loom\.com\/share\/(\w+)/))return"https://www.loom.com/embed/"+m[1];if(m=u.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/))return"https://www.youtube-nocookie.com/embed/"+m[1];if(m=u.match(/vimeo\.com\/(\d+)/))return"https://player.vimeo.com/video/"+m[1];return""}
+function article(id){var a=art(id);if(!a){main.innerHTML='<div class="empty">That guide was not found. <button class="btn" onclick="go(\'\')">Back home</button></div>';return}
+nav(a.c);var c=cat(a.c),v;
+var e=a.link?embed(a.link):"";
+if(a.video)v='<video controls preload="metadata" src="'+esc(a.video)+'"></video>';
+else if(e)v='<iframe src="'+esc(e)+'" allowfullscreen loading="lazy" title="Video" style="width:100%;height:100%;border:0"></iframe>';
+else if(a.link)v='<div><p>This video opens on another site.</p><a class="btn pri" href="'+esc(a.link)+'" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:inline-block">Watch the video</a></div>';
+else v='No video yet. The written steps are below.';
+main.innerHTML='<div class="crumbs"><button onclick="go(\'\')">Home</button> / <button onclick="go(\'c/'+c.id+'\')">'+esc(c.n||"")+'</button></div><h1>'+esc(a.t)+'</h1><p class="lede">'+esc(a.s)+'</p><div class="art"><div>'+
+'<div class="player">'+v+'</div>'+
+((a.steps&&a.steps.length)?'<h2>Steps</h2><ol class="steps">'+a.steps.map(function(s){return '<li><b>'+esc(s.t)+'</b>'+(s.d?'<br><span style="color:var(--muted)">'+esc(s.d)+'</span>':'')+'</li>'}).join("")+'</ol>':'')+
+((a.faq&&a.faq.length)?'<h2>Common questions</h2>'+a.faq.map(function(f){return faqHtml({q:f.q,a:f.a,p:a.c})}).join(""):'')+
+'</div><aside class="meta"><div>'+tag(a)+'</div><dl><dt>Who it’s for</dt><dd>'+esc(a.aud||"Everyone")+'</dd><dt>Owner</dt><dd>'+esc(a.who||"Not set")+'</dd><dt>Last updated</dt><dd>'+(a.updated?new Date(a.updated).toLocaleDateString():"")+'</dd></dl>'+(admin?'<div class="row" style="margin-top:14px"><button class="btn" onclick="editA(\''+esc(a.id)+'\')">Edit</button><button class="btn del" onclick="delA(\''+esc(a.id)+'\')">Delete</button></div>':'')+'</aside></div>'}
+function results(q){nav("");var t=q.toLowerCase();function hit(s){return String(s||"").toLowerCase().indexOf(t)>-1}
+var r=A.filter(function(a){return hit(a.t)||hit(a.s)||hit(cat(a.c).n)||(a.steps||[]).some(function(s){return hit(s.t)||hit(s.d)})||(a.faq||[]).some(function(f){return hit(f.q)||hit(f.a)})});
+var f=allFaqs().filter(function(x){return hit(x.q)||hit(x.a)});
+main.innerHTML='<h1>Results for “'+esc(q)+'”</h1><p class="lede">'+(r.length+f.length)+' found</p>'+(f.length?'<h2>Answers</h2>'+f.map(faqHtml).join(""):"")+(r.length?'<h2>Videos</h2><div class="grid">'+r.map(card).join("")+'</div>':"")+(r.length+f.length?"":'<div class="empty">Nothing matches yet. Try a product name or fewer words.</div>')}
+function route(){if(!ready)return;var q=$("#q").value.trim();if(q){results(q);return}var h=location.hash.slice(1),p=h.split("/");
+if(p[0]==="a")article(p[1]);else if(p[0]==="c"&&CATS.some(function(c){return c.id===p[1]}))list(p[1]);else if(h==="faq")faqPage();else home()}
+$("#q").addEventListener("input",route);
+window.addEventListener("hashchange",function(){$("#q").value="";route()});
+$("#theme").onclick=function(){var r=document.documentElement,d=r.dataset.theme==="dark"||(!r.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark"};
+(async function(){
+try{var r=await fetch("library.json",{cache:"no-store"});var d=await r.json();
+CATS=(d.products||[]).map(function(p){return{id:p.id,n:p.name,d:p.description}});
+A=(d.guides||[]).map(function(g){return{id:g.id,t:g.title,c:g.product,s:g.summary,video:g.video||"",link:g.link||"",len:g.length||"",aud:g.audience,who:g.owner,ok:!!g.verified,updated:g.updated?Date.parse(g.updated):0,steps:(g.steps||[]).map(function(x){return{t:x.title,d:x.detail}}),faq:g.faqs||[]}});
+F=(d.faqs||[]).map(function(f){return{id:f.id,q:f.q,a:f.a,p:f.product}});
+ready=true;route()}catch(e){main.innerHTML='<div class="empty">Could not load library.json. If you opened index.html by double-clicking it, publish it with GitHub Pages or run a local server.</div>'}
+})();
+</script>
+</body>
+</html>

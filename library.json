@@ -1,0 +1,34 @@
+{
+  "products": [
+    {"id": "tms", "name": "Spotter TMS", "description": "Assignments, loads, payroll and profiles"},
+    {"id": "app", "name": "Driver App", "description": "Documents, binder and geofencing"},
+    {"id": "fuel", "name": "Fuelseek", "description": "Fuel data and email forwarding"},
+    {"id": "sen", "name": "Sentinel", "description": "Driver monitoring and safety"},
+    {"id": "int", "name": "Integrations", "description": "PrePass, WEX, Samsara and factoring"}
+  ],
+  "guides": [
+    {
+      "id": "use-premade-assignments-templates",
+      "title": "Use premade Assignments templates",
+      "product": "tms",
+      "summary": "Switch between Dispatcher, Onboarding and Maintenance views in one click.",
+      "video": "assets/templates-demo.mp4",
+      "link": "",
+      "length": "0:43",
+      "audience": "Dispatchers, owners",
+      "owner": "Edward, Bobi",
+      "verified": false,
+      "updated": "2026-10-20",
+      "steps": [
+        {"title": "Go to Assignments", "detail": "Open Assignments in the left menu, then choose the Trucks, Drivers or Trailers tab."},
+        {"title": "Open Options and search “master”", "detail": "The list shows the templates available to your account."},
+        {"title": "Tick Show next to the templates you want", "detail": "Dispatcher, Onboarding and Maintenance appear in your toolbar once they are shown."},
+        {"title": "Pick a template from the Assignments page", "detail": "Your columns and filters change instantly."}
+      ],
+      "faqs": [
+        {"q": "Can I build my own template?", "a": "Yes. Set your Filters and Columns, then click Save Template."}
+      ]
+    }
+  ],
+  "faqs": []
+}
